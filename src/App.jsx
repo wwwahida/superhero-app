@@ -6,27 +6,27 @@ import { Header } from './components'
 import './App.css'
 
 function App() {
-  const [superhero, setSuperhero] = useState([])
+  const [superheros, setSuperheros] = useState([])
 
   useEffect(() => {
-    async function fetchSuperhero() {
+    async function fetchSuperheros() {
       try {
         const response = await fetch("https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/all.json")
         const data = await response.json()
 
-        setSuperhero(data)
+        setSuperheros(data)
       } catch(err) {
         console.log("Failed to load data", err);
       }
     }
 
-    fetchSuperhero()
+    fetchSuperheros()
   }, [])
 
   return (
     <Routes>
       <Route path="/" element={<Header />}>
-        <Route path="/" element={<Pages.HomePage />} />
+        <Route path="/" element={<Pages.HomePage superheros={superheros} />} />
         <Route path="/heroes/:id" element={<Pages.HeroPage />} />
         <Route path="/favourites" element={<Pages.FavouritesPage />} />
         <Route path="/compare" element={<Pages.ComparePage />} />
