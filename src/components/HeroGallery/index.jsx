@@ -14,10 +14,12 @@ export default function HeroGallery() {
   }, [])
 
   return (
-    heroes.map((hero) => (
-      <Link to={`/heroes/${hero.id}`} key={hero.id}>
-        <GalleryImage key={hero.id} hero={hero} />
-      </Link>
-    ))
+    <div className="hero-gallery">
+      {heroes.map((hero) => (
+        <Link to={`/heroes/${hero.id}`} key={hero.id}>
+          <GalleryImage key={hero.id} hero={hero} />
+        </Link>
+      ))}
+    </div>
   )
 }
