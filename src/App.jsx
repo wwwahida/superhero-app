@@ -1,8 +1,13 @@
 import React from 'react'
+import { Routes, Route } from 'react-router-dom'
+import * as Pages from './pages'
 
 function App() {
   return (
-    <div>App</div>
+    <Routes>
+      <Route path="/" element={<Pages.HomePage />} />
+      <Route path="*" element={<Pages.NotFoundPage />} />
+    </Routes>
   )
 }
 
