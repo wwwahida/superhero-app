@@ -67,3 +67,74 @@ h1 {
 .nav-link a:hover {
   color: #ef4444;
 }
+
+.hero-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+
+    background-color: rgba(32, 51, 84, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hero-card-image img{
+    width: 200px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.hero-info {
+    flex: 1;
+    min-width: 0;
+    color: white;
+}
+
+.hero-info h2 {
+    color: white;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero-info h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #ef4444;
+}
+
+.powerstats {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.powerstats p {
+    margin: 0 0 5px;
+    padding: 0;
+    font-size: 18px;
+    border-radius: 4px;
+}
+
+.stat {
+    width: 100%;
+}
+
+.stat-bar {
+    width: 100%;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.stat-fill {
+    height: 100%;
+    background-color: #ef4444;
+    border-radius: 4px;
+}
