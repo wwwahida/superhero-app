@@ -26,6 +26,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Header />}>
         <Route path="/" element={<Pages.HomePage />} />
+        <Route path="/heroes/:id" element={<Pages.HeroPage />} />
         <Route path="/favourites" element={<Pages.FavouritesPage />} />
         <Route path="/compare" element={<Pages.ComparePage />} />
         <Route path="*" element={<Pages.NotFoundPage />} />
