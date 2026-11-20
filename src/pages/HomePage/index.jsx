@@ -1,10 +1,17 @@
 import React from "react"
+import { useState } from "react";
 
-export default function HomePage() {
+function HomePage() {
+    const [searchText, setSearchtext] = useState("")
+    // const filteredSuperhero = superhero.filter((e) => 
+    // e.name.toLowerCase().includes(searchText.toLowerCase()))
   return (
     <>
-      <h1>superhero app</h1>
+      <h1>HeroHub</h1>
       <em>find out more about your favourite superhero</em>
     </>
   )
 }
+
+export default HomePage
+
