@@ -73,8 +73,9 @@ h1 {
     align-items: center;
     gap: 20px;
 
+    width: 90%;
     max-width: 1000px;
-    margin: 20px auto;
+    margin: 60px auto;
     padding: 20px;
 
     background-color: rgba(32, 51, 84, 0.8);
@@ -83,8 +84,8 @@ h1 {
 }
 
 .hero-card-image img{
-    width: 200px;
-    height: 400px;
+    width: 300px;
+    height: 500px;
     object-fit: cover;
     border-radius: 8px;
 }
@@ -137,4 +138,59 @@ h1 {
     height: 100%;
     background-color: #ef4444;
     border-radius: 4px;
+}
+
+.hero-tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.hero-tabs button {
+    padding: 10px 20px;
+    background-color: #304969;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.hero-tabs button.active, .hero-tabs button:hover {
+    background-color: #ef4444;
+}
+
+.hero-section {
+    color: white;
+}
+
+.hero-section p {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.hero-card-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.hero-heading h2 {
+    margin: 0;   
+}
+
+.hero-publisher {
+    display: inline-block;
+    background-color: #ef4444;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0 20px 20px;
 }
