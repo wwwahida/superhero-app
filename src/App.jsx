@@ -4,26 +4,26 @@ import { Routes, Route } from 'react-router-dom'
 import Home from './pages/HomePage'
 
 function App() {
-  const [superhero, setSuperhero] = useState([])
+  const [superheros, setSuperheros] = useState([])
 
   useEffect(() => {
-    async function fetchSuperhero() {
+    async function fetchSuperheros() {
       try {
         const response = await fetch("https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/all.json")
         const data = await response.json()
 
-        setSuperhero(data)
+        setSuperheros(data)
       } catch(err) {
         console.log("Failed to load data", err);
       }
     }
 
-    fetchSuperhero()
+    fetchSuperheros()
   }, [])
 
   return (
     <>
-      <Home />
+      <Home superheros={superheros}/>
     </>
   )
 
