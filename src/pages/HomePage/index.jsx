@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Searchbar from "../../components/Searchbar";
 
 function Home( {superhero} ){
     const [searchText, setSearchtext] = useState("")
@@ -7,6 +8,7 @@ function Home( {superhero} ){
     return (
         <div> 
             <h1>HeroHub</h1>
+            < Searchbar searchText={searchText} setSearchtext={setSearchtext} />
         </div>
     )
 }
