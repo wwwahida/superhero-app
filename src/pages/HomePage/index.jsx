@@ -17,6 +17,7 @@ function HomePage({ superheros }) {
       <h1>HeroHub</h1>
       <br/>
       <em>Find out more about your favourite superhero </em>
+      <br/>
       <Searchbar searchText={searchText} setSearchtext={setSearchtext}/>
       <Statbar 
         superheros={superheros}
